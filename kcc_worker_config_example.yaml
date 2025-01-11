@@ -1,0 +1,8 @@
+#Mount this file in /kcc_worker_config.yaml in the container
+kcc_params_by_folder:
+  - folder: /mangas # This is the folder where the manga files are stored
+    params: "-p KO -f EPUB --manga-style" # This are the arguments passed to the kcc-c2e command. Do not add the input or output file arguments
+    delete_after: true # Optional. If true, the input files will be deleted after the conversion. Default is false
+  - folder: /comics # You can specify more folders with their own kcc parameters
+    params: "-p KO -f EPUB --forcecolor"
+    delete_after: true
